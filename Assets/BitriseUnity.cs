@@ -13,16 +13,22 @@ class BitriseUnity
 		tools.PrintInputs ();
 
 		BuildPlayerOptions buildPlayerOptions = new BuildPlayerOptions();
-		buildPlayerOptions.scenes = tools.GetActiveScenes();
+		buildPlayerOptions.scenes = tools.GetActiveScenes();//NOTIFY USER IF NO ANY
 		buildPlayerOptions.locationPathName = tools.inputs.buildOutput;
 
 		if (tools.inputs.buildPlatform == BitriseTools.BuildPlatform.android) {
-			EditorPrefs.SetString("AndroidSdkRoot", tools.inputs.androidSdkPath);
+			EditorPrefs.SetString ("AndroidSdkRoot", tools.inputs.androidSdkPath);
 			buildPlayerOptions.target = BuildTarget.Android;
+
 			//set jdk path?
-			//keystore options....
-		}else if(tools.inputs.buildPlatform == BitriseTools.BuildPlatform.ios) {
+			PlayerSettings.Android.keystoreName = tools.inputs.androidKeystorePath;
+			PlayerSettings.Android.keystorePass = tools.inputs.androidKeystorePassword;
+			PlayerSettings.Android.keyaliasName = tools.inputs.androidKeystoreAlias;
+			PlayerSettings.Android.keyaliasPass = tools.inputs.androidKeystoreAliasPassword;
+		} else if (tools.inputs.buildPlatform == BitriseTools.BuildPlatform.ios) {
 			buildPlayerOptions.target = BuildTarget.iOS;
+		} else {
+			tools.log.Fail("Invalid buildPlatform: "+tools.inputs.buildPlatform.ToString());
 		}
 			
 		buildPlayerOptions.options = BuildOptions.None;
@@ -36,6 +42,7 @@ public class BitriseTools {
 	public Logging log;
 
 	public enum BuildPlatform {
+		unknown,
 		android,
 		ios,
 	}
@@ -63,7 +70,7 @@ public class BitriseTools {
 		public Inputs() {
 			string[] cmdArgs = Environment.GetCommandLineArgs();
 			for(int i=0;i<cmdArgs.Length;i++){
-				if (cmdArgs [i].Equals ("-buildplatform"))
+				if (cmdArgs [i].Equals ("-buildPlatform"))
 					buildPlatform = (BuildPlatform)Enum.Parse(typeof(BuildPlatform),cmdArgs [i + 1]);
 				if (cmdArgs [i].Equals ("-androidSdkPath"))
 					androidSdkPath = cmdArgs [i + 1];

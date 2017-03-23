@@ -1,0 +1,51 @@
+<root>
+  <License id="Terms">
+    <AlwaysOnline Value="false"/>
+    <ClientProvidedVersion Value="5.5.0f3"/>
+    <DeveloperData Value="AQAAAEYzLUtETkstOEJIRy05RUtBLTNSNlQtV1FNNQ=="/>
+    <Features>
+      <Feature Value="1"/>
+      <Feature Value="2"/>
+      <Feature Value="3"/>
+      <Feature Value="12"/>
+      <Feature Value="17"/>
+      <Feature Value="19"/>
+      <Feature Value="24"/>
+      <Feature Value="33"/>
+      <Feature Value="36"/>
+      <Feature Value="62"/>
+    </Features>
+    <InitialActivationDate Value="2015-10-30T07:36:29"/>
+    <LicenseVersion Value="5.x"/>
+    <MachineBindings>
+      <Binding Key="1" Value="00000000-0000-1000-8000-0050568B7E1"/>
+      <Binding Key="2" Value="VMK0CDTm/HXQ"/>
+    </MachineBindings>
+    <MachineID Value="Ljo+lpXBuaqrK/BF8u4th3Z82KE5CKUmUsr6KF8kjic="/>
+    <SerialHash Value="2ae6bf313525540072b1f0d4203f4ade4a44cd68"/>
+    <SerialMasked Value="F3-KDNK-8BHG-9EKA-3R6T-XXXX"/>
+    <StartDate Value=""/>
+    <StopDate Value=""/>
+    <UpdateDate Value="2017-03-24T11:46:11"/>
+  </License>
+
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+<SignedInfo>
+<CanonicalizationMethod Algorithm="http://www.w3.org/TR/2001/REC-xml-c14n-20010315#WithComments"/>
+<SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+<Reference URI="#Terms">
+<Transforms>
+<Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/>
+</Transforms>
+<DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+<DigestValue>b0X1sugkkowvjEVZrzYU4i7fpG8=</DigestValue>
+</Reference>
+</SignedInfo>
+<SignatureValue>1H4nVdBPZaBLRsN8/RO9N+uR09xYc4zSehJT1oxaUjALoEpBwBD/rKpNEzDK+tM4
+7vIPzmvjJJoWuZtK3673nTaL3EHWD8Xvu8tiS6bYixqDgXSpMfcBjOxMqPhT8MT2
+7ODK7w5W5yYSLaX3ou9LsxmTgUdLKnX3BplevkBgPcrQbDXKty05NCgafVyq1EAi
+jP9c+q19CcLGvr0jlrY+mv3s8MfwmVNn1va5ZJzLj2jp0gULij1bpeqTbwIBik9o
+/DqegvjVx04y186hGogFMR+phC+sR1PXHzMlaWcvwbI7LJ8VjshY/1tO0pano1ub
+k0aJEdki8DIpCpHosTWUIw==</SignatureValue>
+</Signature>
+</root>

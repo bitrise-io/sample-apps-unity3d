@@ -1,8 +1,8 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/BitriseUnity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/testing.cs">
     <Files>
-      <File FileName="Assets/BitriseUnity.cs" Line="31" Column="83" />
+      <File FileName="Assets/testing.cs" Line="9" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
